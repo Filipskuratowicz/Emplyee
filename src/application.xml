@@ -1,0 +1,13 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"  
+            "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+		
+	<bean id="employeeService" class="pl.debuguj.spring.services.employee.EmployeeServiceImpl"/>
+	
+	<bean id="taskService" class="pl.debuguj.spring.services.task.TaskServiceImpl">
+	
+		<constructor-arg ref="employeeService"/>
+		
+	</bean>
+
+</beans>
